@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  origin: MyString
+  destination: MyString
+  arrival_time: 2018-05-06 00:05:09
+  departure_time: MyString
+
+two:
+  origin: MyString
+  destination: MyString
+  arrival_time: 2018-05-06 00:05:09
+  departure_time: MyString

@@ -1,16 +1,25 @@
-class UsersController < Devise::RegistrationsController
+class UsersController < ApplicationController
 
   before_action :user_params, only: [:update]
-  before_action :set_user, only: [:update]
+  before_action :set_user, only: [:update, :show]
 
   def show
   end
 
-  def update
-    super
+  def create
+    @user = User.create(user_params)
+    head :ok
   end
 
-  private 
+  def update
+    if @user.update(user_params)
+      head :ok
+    else
+      head :bad_request
+    end
+  end
+
+  private
 
   def set_user
     @user = User.find(params[:id])
@@ -18,6 +27,6 @@ class UsersController < Devise::RegistrationsController
   end
 
   def user_params
-    params.permit(:pickup_place, :phone_number)
+    params.permit(:pickup_place, :phone_number, :email, :password)
   end
-end 
+end

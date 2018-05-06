@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :user_params, only: [:update]
+  before_action :user_params, only: [:update, :create]
   before_action :set_user, only: [:update, :show]
 
   def show
@@ -27,6 +27,6 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.permit(:pickup_place, :phone_number, :email, :password)
+    params.permit(:pickup_place, :phone_number, :email, :password, :name)
   end
 end

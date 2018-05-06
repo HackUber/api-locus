@@ -9,12 +9,37 @@ user.groups.create!(
 )
 
 user.groups.create!(
-  name: 'Faculdade',
+  name: 'Churrasco',
   origin: 'Asa Norte Superquadra Norte 212 SQN 212 BL J - Asa Norte, Brasilia - Federal District',
   destination: 'Centro Universitário Euro Americano - Unieuro Asa Norte, St. de Grandes Áreas Norte 916 - Brasília, DF, 70790-160',
   arrival_time: Time.now,
   departure_time: Time.now
 )
+
+user.groups.create!(
+  name: 'Futebol',
+  origin: 'Asa Norte Superquadra Norte 212 SQN 212 BL J - Asa Norte, Brasilia - Federal District',
+  destination: 'Centro Universitário Euro Americano - Unieuro Asa Norte, St. de Grandes Áreas Norte 916 - Brasília, DF, 70790-160',
+  arrival_time: Time.now,
+  departure_time: Time.now
+)
+
+user.groups.create!(
+  name: 'Médico',
+  origin: 'Asa Norte Superquadra Norte 212 SQN 212 BL J - Asa Norte, Brasilia - Federal District',
+  destination: 'Centro Universitário Euro Americano - Unieuro Asa Norte, St. de Grandes Áreas Norte 916 - Brasília, DF, 70790-160',
+  arrival_time: Time.now,
+  departure_time: Time.now
+)
+
+user.groups.create!(
+  name: 'Igreja',
+  origin: 'Asa Norte Superquadra Norte 212 SQN 212 BL J - Asa Norte, Brasilia - Federal District',
+  destination: 'Centro Universitário Euro Americano - Unieuro Asa Norte, St. de Grandes Áreas Norte 916 - Brasília, DF, 70790-160',
+  arrival_time: Time.now,
+  departure_time: Time.now
+)
+
 
 user2 = User.create(email: 'maximilian_bartoletti@wisoky.com', password: '123456')
 user3 = User.create(email: 'atlynn_dach@gutkowski.net', password: '123456')

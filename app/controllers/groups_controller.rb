@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
 
+  before_action :authenticate_user
   before_action :set_group, only: [:show, :update]
 
   def index
@@ -27,7 +28,7 @@ class GroupsController < ApplicationController
   private
 
   def set_group
-    @group = User.first.groups.find(params[:id])
+    @group = current_user.groups.find(params[:id])
     head :not_found unless @group
   end
 

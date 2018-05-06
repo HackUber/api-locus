@@ -2,7 +2,6 @@ Devise.setup do |config|
   # config.secret_key = '58dc87737df2432a9110a0993746036bdcd24e266d2909a7cb4c9109dd68269bbe8615d5a962610e92a00df79625cc88b6b03a2a6ae064a7fbed14bb398b4ba8'
   
   config.parent_controller = 'ActionController::Base'
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
   require 'devise/orm/active_record'
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email]

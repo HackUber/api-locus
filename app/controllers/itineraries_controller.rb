@@ -1,4 +1,4 @@
-class ItinerariesController
+class ItinerariesController < ApplicationController
 
   before_action :set_itinerary, only: [:show, :update]
 

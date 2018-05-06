@@ -1,2 +1,2 @@
-json.extract! group, :id, :created_at, :updated_at
-json.url group_url(group, format: :json)
+json.extract! group, :name, :origin, :destination, :arrival_time, :departure_time
+json.itinerary @itinerary

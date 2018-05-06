@@ -8,7 +8,6 @@ user.groups.create!(
   departure_time: Time.now
 )
 
-
 user.groups.create!(
   name: 'Faculdade',
   origin: 'Asa Norte Superquadra Norte 212 SQN 212 BL J - Asa Norte, Brasilia - Federal District',
@@ -16,7 +15,6 @@ user.groups.create!(
   arrival_time: Time.now,
   departure_time: Time.now
 )
-
 
 user2 = User.create(email: 'maximilian_bartoletti@wisoky.com', password: '123456')
 user3 = User.create(email: 'atlynn_dach@gutkowski.net', password: '123456')

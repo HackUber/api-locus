@@ -11,6 +11,8 @@ gem 'pg'
 gem 'jbuilder'
 gem 'sqlite3'
 gem 'puma', '~> 3.7'
+gem 'simple_token_authentication'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

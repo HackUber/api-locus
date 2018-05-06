@@ -7,6 +7,7 @@ end
 
 gem 'rails', '~> 5.1.4'
 gem 'devise', '~> 4.4.3'
+gem 'pg'
 gem 'jbuilder'
 gem 'sqlite3'
 gem 'puma', '~> 3.7'

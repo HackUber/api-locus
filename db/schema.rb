@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180506045159) do
+ActiveRecord::Schema.define(version: 20180506070547) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "cars", force: :cascade do |t|
     t.string "brand"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 20180506045159) do
     t.string "plate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
@@ -33,9 +36,10 @@ ActiveRecord::Schema.define(version: 20180506045159) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "itineraries", id: false, force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "group_id"
+  create_table "itineraries", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "group_id"
+    t.boolean "work_days", default: [false, false, false, false, false, false, false], array: true
     t.index ["group_id"], name: "index_itineraries_on_group_id"
     t.index ["user_id"], name: "index_itineraries_on_user_id"
   end
@@ -59,4 +63,5 @@ ActiveRecord::Schema.define(version: 20180506045159) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cars", "users"
 end

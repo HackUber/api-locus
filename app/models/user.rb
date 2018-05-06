@@ -4,4 +4,6 @@ class User < ApplicationRecord
 
   has_many :itineraries
   has_many :groups, through: :itineraries
+
+  has_many :cars
 end

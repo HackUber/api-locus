@@ -1,4 +1,4 @@
-user = User.create!(email: 'test@test.com', password: '123456')
+user = User.create!(email: 'trey@simoniskuphal.io', password: '123456')
 
 user.groups.create!(
   name: 'Trabalho',
@@ -17,3 +17,11 @@ user.groups.create!(
   departure_time: Time.now
 )
 
+
+user2 = User.create(email: 'maximilian_bartoletti@wisoky.com', password: '123456')
+user3 = User.create(email: 'atlynn_dach@gutkowski.net', password: '123456')
+user4 = User.create(email: 'arianna_will@hills.info', password: '123456')
+
+Group.last.users << user2
+Group.last.users << user3
+Group.last.users << user4

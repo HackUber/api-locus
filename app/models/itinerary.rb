@@ -14,6 +14,7 @@ class Itinerary < ApplicationRecord
       user_with_work_days.each do |user|
         if user[1].at(day)
           itinerary[day] = user[0]
+          break
         else
           itinerary[day] = nil
         end
